@@ -1,0 +1,206 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Static pages</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=9c11fa06bc">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="http://127.0.1.1:8080/static-pages/">
+    
+    <meta property="og:site_name" content="more-umbrellas">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Static pages">
+    <meta property="og:description" content="A static page is a page that you want to separate from your normal post content.  The most popular examples of a static page are a contact page and an about page.  These pages you want to be static so...">
+    <meta property="og:url" content="http://127.0.1.1:8080/static-pages/">
+    <meta property="article:published_time" content="2015-07-13T02:27:20.516Z">
+    <meta property="article:modified_time" content="2015-07-13T02:27:20.513Z">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Static pages">
+    <meta name="twitter:description" content="A static page is a page that you want to separate from your normal post content.  The most popular examples of a static page are a contact page and an about page.  These pages you want to be static so...">
+    <meta name="twitter:url" content="http://127.0.1.1:8080/static-pages/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "more-umbrellas",
+    "author": {
+        "@type": "Person",
+        "name": "william",
+        "url": "http://127.0.1.1:8080/author/william",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Static pages",
+    "url": "http://127.0.1.1:8080/static-pages/",
+    "datePublished": "2015-07-13T02:27:20.516Z",
+    "dateModified": "2015-07-13T02:27:20.513Z",
+    "description": "A static page is a page that you want to separate from your normal post content.  The most popular examples of a static page are a contact page and an about page.  These pages you want to be static so..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.6">
+    <link rel="alternate" type="application/rss+xml" title="more-umbrellas" href="http://127.0.1.1:8080/rss/">
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="http://127.0.1.1:8080/">Home</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="http://127.0.1.1:8080/rss/">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="blog-logo" href="http://127.0.1.1:8080"><img src="../content/images/2015/07/abstract4.jpg" alt="more-umbrellas"></a>
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Static pages</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-07-12">12 July 2015</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>A static page is a page that you want to separate from your normal post content. <br>
+The most popular examples of a static page are a contact page and an about page. <br>
+These pages you want to be static so they do not show up in your post feed.</p>
+
+<h2 id="createastaticpageasadmin">Create a static page as admin</h2>
+
+<ul>
+<li>create a new post </li>
+<li>look for the cog wheel icon next to where it says "Save Draft" or "Update Post" </li>
+<li>Click on that cog, and check the "Static Page" button. <br>
+This will convert your post to a static page.</li>
+</ul>
+
+<h2 id="info">Info</h2>
+
+<p>You can define static pages with Ghost, <br>
+but you need to handle the linking to them yourself. <br>
+Static pages can be defined in <code>page.hbs</code> , <br>
+which is in fact very similar to <code>post.hbs</code> and shares the same context. <br>
+References in Handlebars code (within the Ghost files) <br>
+appear as <code>{{#post}}</code>. </p>
+
+<p>Notable exception to the regular posts is that <br>
+you can define different templates for different static pages. <br>
+Ghost will first look for <code>page-{{slug}}.hbs</code> and use it if there is one, <br>
+or fall back to <code>page.hbs</code> or <code>post.hbs</code> <br>
+The slug can be defined on the Ghost admin panel when creating a new static page. <br>
+This means that you can create as many separate pages <br>
+with different layouts that you like and <br>
+still manage all the content from the admin panel.</p>
+
+<p>A static post will not show up on the index page (in the {{#foreach posts}} section) <br>
+like a regular post, the post date becomes irrelevant. <br>
+Instead it is something that has to be specifically linked to and <br>
+is used for things like About/Contact pages and in your theme <br>
+It will take on the style template from page.hbs if present or <br>
+you can make a template for a specific static post by <br>
+giving it its own template such as page-about.hbs</p>
+
+<h4 id="randomposterinfo">random poster info</h4>
+
+<p>After some thinking and some luck (I know nothing about hbs) <br>
+I have found a way to display a static page with <br>
+the possibility of using your own structure and sharing default.hbs:</p>
+
+<p>Into the root directory of the casper theme <br>
+create a page.hbs file with this code <br>
+<code>{{!&lt; default}}</code> <br>
+plus all your content.</p>
+
+<p>Create a static page within the built-in text editor with <br>
+a title and nothing written on the content field.</p>
+
+<p>Add a link whenever you want to display your static page <br>
+<a href="http://localhost:2368/url_post_static_page">Portfolio</a></p>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/william/">william</a></h4>
+
+                    <p>Read <a href="../author/william/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Static%20pages&amp;url=http://127.0.1.1:8080/static-pages/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.1.1:8080/static-pages/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://127.0.1.1:8080/static-pages/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev " style="background-image: url(../content/images/2015/07/Ghost-Logo-Dark-alter-1.png)" href="../ghost-theme-information/">
+        <section class="post">
+            <h2>Ghost Themes</h2>
+            <p>Ghost themes have a hierarchy of page coding.  Using the "handelebar" system of coding,  an attempt is made to…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="http://127.0.1.1:8080">more-umbrellas</a> © 2015</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script src="../public/jquery.min.js?v=9c11fa06bc"></script>
+
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=9c11fa06bc"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=9c11fa06bc"></script>
+
+</body>
